@@ -28,6 +28,14 @@
 		<p:column headerText="Date de naissance">
 			<h:outputText value="#{etudiant.dn}" />
 		</p:column>
+		
+		<p:column headerText="Supression">
+			<p:commandButton value="supprimer" action="#{etuMB.supprEtudiant}" update="@all">
+				<f:setPropertyActionListener value="#{etudiant.id}" target="#{etuMB.etudiant.id}"/>
+			</p:commandButton>
+			
+		</p:column>
+		
 	</p:dataTable>
 
 

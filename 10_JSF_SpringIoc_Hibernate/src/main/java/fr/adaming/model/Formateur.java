@@ -22,7 +22,7 @@ public class Formateur implements Serializable {
 
 	private String mail;
 
-	private String passowrd;
+	private String password;
 
 	@OneToMany(mappedBy="formateur")
 	private List<Etudiant> listeEtudiants;
@@ -34,7 +34,7 @@ public class Formateur implements Serializable {
 	public Formateur(String mail, String passowrd) {
 		super();
 		this.mail = mail;
-		this.passowrd = passowrd;
+		this.password = passowrd;
 	}
 
 	public Formateur(int id, String mail, String passowrd) {
@@ -60,12 +60,12 @@ public class Formateur implements Serializable {
 		this.mail = mail;
 	}
 
-	public String getPassowrd() {
-		return passowrd;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPassowrd(String passowrd) {
-		this.passowrd = passowrd;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public List<Etudiant> getListeEtudiants() {
